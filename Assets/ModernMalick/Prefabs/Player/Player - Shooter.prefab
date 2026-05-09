@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4996170515969140119}
+  - component: {fileID: 3338263106932187019}
   m_Layer: 3
   m_Name: CameraRoot
   m_TagString: Untagged
@@ -25,13 +26,27 @@ Transform:
   m_GameObject: {fileID: 1409911008423254373}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 6913751006618194363}
   m_Father: {fileID: 4326272784809545189}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3338263106932187019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409911008423254373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a3d082ecab804741bbf18e376d4818e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerCamera
+  playerBody: {fileID: 8849844873207864012}
+  maxVerticalAngle: 90
 --- !u!1 &1565653947139990692
 GameObject:
   m_ObjectHideFlags: 0
@@ -172,6 +187,8 @@ GameObject:
   - component: {fileID: 8849844873207864012}
   - component: {fileID: 6962198213670640812}
   - component: {fileID: 2929373698984152505}
+  - component: {fileID: 3110406258598836465}
+  - component: {fileID: 516002506524254882}
   m_Layer: 3
   m_Name: Body
   m_TagString: Player
@@ -202,7 +219,7 @@ CapsuleCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3835010167183905655}
-  m_Material: {fileID: 13400000, guid: 38569d7dd5121a64da2d16f0403ed8cc, type: 2}
+  m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -214,7 +231,7 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.35
   m_Height: 1.8
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
@@ -245,6 +262,110 @@ Rigidbody:
   m_Interpolate: 2
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &3110406258598836465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835010167183905655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7725454473fd5548b8a8535979fa213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerMovement
+  playerGround: {fileID: 4671558590760318418}
+  walkSpeed: 8
+  airControlFactor: 1
+  jumpForce: 13
+  coyoteTime: 0.3
+  canDoubleJump: 1
+  doubleJumpForce: 13
+  canDash: 1
+  dashSpeed: 60
+  dashDuration: 0.08
+  dashCooldown:
+    duration: 5
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onReady:
+      m_PersistentCalls:
+        m_Calls: []
+    onElapsedChanged:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 7000976128392398662}
+          m_TargetAssemblyTypeName: ModernMalick.UI.DynamicProgress, UI
+          m_MethodName: UpdateProgress
+          m_Mode: 0
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  onJumped:
+    m_PersistentCalls:
+      m_Calls: []
+  onDoubleJumped:
+    m_PersistentCalls:
+      m_Calls: []
+  onDashStarted:
+    m_PersistentCalls:
+      m_Calls: []
+  onDashEnded:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &516002506524254882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3835010167183905655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34fa7f6ea49946ebba6e94a7c06d2b8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Components.Health.Health
+  currentHealth: 100
+  maxHealth: 100
+  onHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onMaxHealthChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthModified:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthPercentageChanged:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 421105380687029969}
+        m_TargetAssemblyTypeName: ModernMalick.UI.DynamicProgress, UI
+        m_MethodName: UpdateProgress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onHealthIncreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthDecreased:
+    m_PersistentCalls:
+      m_Calls: []
+  onHealthDepleted:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &3852315946122925461
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,7 +393,7 @@ Transform:
   m_GameObject: {fileID: 3852315946122925461}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.4, z: 0.25}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -356,6 +477,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1615368598597046954}
   - component: {fileID: 7883473328682021115}
+  - component: {fileID: 4671558590760318418}
   m_Layer: 3
   m_Name: Ground
   m_TagString: Untagged
@@ -399,6 +521,21 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4671558590760318418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4865108103342986595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037c42e843bf4908b672baa084cc5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerGround
+  onLanded:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &7067687022213038397
 GameObject:
   m_ObjectHideFlags: 0
@@ -590,15 +727,19 @@ PrefabInstance:
     - target: {fileID: 3092172839408068283, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a599756741be91d4fbc35c19c3e859a6, type: 3}
+      objectReference: {fileID: 21300000, guid: fa78c3e077d9f78448309dec8a79372b, type: 3}
     - target: {fileID: 3092172839408068283, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_FillMethod
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4820495031054772774, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
+      propertyPath: tweenDuration
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7858990138325349563, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: a599756741be91d4fbc35c19c3e859a6, type: 3}
+      objectReference: {fileID: 21300000, guid: fa78c3e077d9f78448309dec8a79372b, type: 3}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -625,11 +766,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 80
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 80
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -665,7 +806,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 96
+      value: 80
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -697,6 +838,17 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
   m_PrefabInstance: {fileID: 2579894095801462112}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &7000976128392398662 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4820495031054772774, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
+  m_PrefabInstance: {fileID: 2579894095801462112}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f834da9d1e429a89ff93c826c20af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UI::ModernMalick.UI.DynamicProgress
 --- !u!1001 &5133478692279094519
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -739,11 +891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 384
+      value: 256
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 32
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
       propertyPath: m_LocalPosition.x
@@ -806,6 +958,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
+--- !u!114 &421105380687029969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4820495031054772774, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
+  m_PrefabInstance: {fileID: 5133478692279094519}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44f834da9d1e429a89ff93c826c20af8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UI::ModernMalick.UI.DynamicProgress
 --- !u!224 &3544368524792757037 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8506710121144776666, guid: 0d4d6cff43be0c3459b7d80413e4f6cc, type: 3}
@@ -968,8 +1131,30 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2412405718017538566, guid: bdf5c350a45b23a4f80fd4fff4abb631, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3544368524792757037}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8917292903297619989, guid: bdf5c350a45b23a4f80fd4fff4abb631, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4898382035975337389}
   m_SourcePrefab: {fileID: 100100000, guid: bdf5c350a45b23a4f80fd4fff4abb631, type: 3}
+--- !u!1 &3318756622203107166 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8917292903297619989, guid: bdf5c350a45b23a4f80fd4fff4abb631, type: 3}
+  m_PrefabInstance: {fileID: 6182880670559153995}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4898382035975337389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3318756622203107166}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6c32f91162d43598ec2fa190269cbbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UI::ModernMalick.UI.UITweener
+  tweenMaxScale: 1.1
+  tweenTime: 0.25
 --- !u!114 &5132846804006715241 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1366149584364965922, guid: bdf5c350a45b23a4f80fd4fff4abb631, type: 3}

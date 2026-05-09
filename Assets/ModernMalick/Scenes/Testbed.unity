@@ -601,25 +601,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4883762814713038, guid: baebdd3b26f756b4c8f1b2d2efe1cf42, type: 3}
   m_PrefabInstance: {fileID: 1671597710}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1278327899 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3318756622203107166, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1278327904
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1278327899}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6c32f91162d43598ec2fa190269cbbd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UI::ModernMalick.UI.UITweener
-  tweenMaxScale: 1.1
-  tweenTime: 0.25
 --- !u!1001 &1283078903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1112,16 +1093,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4883762814713038, guid: baebdd3b26f756b4c8f1b2d2efe1cf42, type: 3}
   m_PrefabInstance: {fileID: 634761218}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1377865020976036604 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 8849844873207864012, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2188696848491532096 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4865108103342986595, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2459834846120522168
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,18 +1101,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 658716121793874907, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fa78c3e077d9f78448309dec8a79372b, type: 3}
-    - target: {fileID: 3544368524792757037, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 256
-      objectReference: {fileID: 0}
-    - target: {fileID: 3544368524792757037, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 24
-      objectReference: {fileID: 0}
     - target: {fileID: 4326272784809545189, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1182,50 +1141,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4996170515969140119, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 5003457769105937498, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5682731180679600603, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: fa78c3e077d9f78448309dec8a79372b, type: 3}
-    - target: {fileID: 6179017621666683578, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 6179017621666683578, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 48
-      objectReference: {fileID: 0}
-    - target: {fileID: 6179017621666683578, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 80
-      objectReference: {fileID: 0}
-    - target: {fileID: 6913751006618194363, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6913751006618194363, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962198213670640812, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_Radius
-      value: 0.35
-      objectReference: {fileID: 0}
-    - target: {fileID: 6962198213670640812, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: m_Material
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 7000976128392398662, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      propertyPath: tweenDuration
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7067687022213038397, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       propertyPath: m_Name
       value: Player
@@ -1233,188 +1148,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1409911008423254373, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6269308318310057300}
-    - targetCorrespondingSourceObject: {fileID: 3835010167183905655, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4721989751960636160}
-    - targetCorrespondingSourceObject: {fileID: 3835010167183905655, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 4721989751960636159}
-    - targetCorrespondingSourceObject: {fileID: 4865108103342986595, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 6673649499071924276}
-    - targetCorrespondingSourceObject: {fileID: 3318756622203107166, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1278327904}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
---- !u!114 &2459834846120522169 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 421105380687029969, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f834da9d1e429a89ff93c826c20af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UI::ModernMalick.UI.DynamicProgress
---- !u!114 &2459834846120522170 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7000976128392398662, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44f834da9d1e429a89ff93c826c20af8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UI::ModernMalick.UI.DynamicProgress
---- !u!1 &2673834659000861905 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1409911008423254373, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3366911628993924879 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3835010167183905655, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &4721989751960636159
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366911628993924879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 34fa7f6ea49946ebba6e94a7c06d2b8a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Components.Health.Health
-  currentHealth: 100
-  maxHealth: 100
-  onHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onMaxHealthChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  onHealthModified:
-    m_PersistentCalls:
-      m_Calls: []
-  onHealthPercentageChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2459834846120522169}
-        m_TargetAssemblyTypeName: ModernMalick.UI.DynamicProgress, UI
-        m_MethodName: UpdateProgress
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onHealthIncreased:
-    m_PersistentCalls:
-      m_Calls: []
-  onHealthDecreased:
-    m_PersistentCalls:
-      m_Calls: []
-  onHealthDepleted:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &4721989751960636160
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3366911628993924879}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7725454473fd5548b8a8535979fa213, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerMovement
-  playerGround: {fileID: 6673649499071924276}
-  walkSpeed: 8
-  airControlFactor: 1
-  jumpForce: 13
-  coyoteTime: 0.3
-  canDoubleJump: 1
-  doubleJumpForce: 13
-  canDash: 1
-  dashSpeed: 60
-  dashDuration: 0.08
-  dashCooldown:
-    duration: 5
-    onStarted:
-      m_PersistentCalls:
-        m_Calls: []
-    onReady:
-      m_PersistentCalls:
-        m_Calls: []
-    onElapsedChanged:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2459834846120522170}
-          m_TargetAssemblyTypeName: ModernMalick.UI.DynamicProgress, UI
-          m_MethodName: UpdateProgress
-          m_Mode: 0
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  onJumped:
-    m_PersistentCalls:
-      m_Calls: []
-  onDoubleJumped:
-    m_PersistentCalls:
-      m_Calls: []
-  onDashStarted:
-    m_PersistentCalls:
-      m_Calls: []
-  onDashEnded:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &6269308318310057300
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2673834659000861905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a3d082ecab804741bbf18e376d4818e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerCamera
-  playerBody: {fileID: 1377865020976036604}
-  maxVerticalAngle: 90
---- !u!114 &6673649499071924276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2188696848491532096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 037c42e843bf4908b672baa084cc5df7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerGround
-  onLanded:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!20 &8809190383200648465 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 8426353976640775410, guid: fe34516ec252231409e93c6edbe2289a, type: 3}

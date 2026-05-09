@@ -1,0 +1,19 @@
+{
+    "name": "UI",
+    "rootNamespace": "ModernMalick",
+    "references": [
+        "GUID:6055be8ebefd69e48b49212b09b47b2f",
+        "GUID:75469ad4d38634e559750d17036d5f7c",
+        "GUID:0758d46b133a3ae479a2754a2066007f",
+        "GUID:ff04c04275022eb41a9efdbaf052926f"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -53,7 +53,7 @@ namespace ModernMalick.Huntwave.Player.Weapons
             }
         }
 
-        public void OnAttack(InputValue value)
+        public void OnShoot(InputValue value)
         {
             var weapon = CurrentWeapon;
             if (weapon == null) return;

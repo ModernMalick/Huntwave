@@ -11,6 +11,7 @@ namespace ModernMalick.Huntwave.Enemy
     public class Enemy : MonoBehaviourExtended
     {
         [SerializeField] private float actionRange = 1f;
+        [SerializeField] private LayerMask obstacleMask;
         [SerializeField] private Cooldown actionCooldown;
 
         [Header("Events")] 
@@ -36,7 +37,7 @@ namespace ModernMalick.Huntwave.Enemy
             
             if (_isPerformingAction) return;
             
-            if (IsInActionRange())
+            if (CanInteract())
             {
                 _agent.isStopped = true;
                 
@@ -57,6 +58,16 @@ namespace ModernMalick.Huntwave.Enemy
         private bool IsInActionRange()
         {
             return Vector3.Distance(transform.position, Target.position) <= actionRange;
+        }
+        
+        private bool CanInteract()
+        {
+            if (!IsInActionRange()) return false;
+
+            var direction = (Target.position - transform.position).normalized;
+            var distance = Vector3.Distance(transform.position, Target.position);
+
+            return !Physics.Raycast(transform.position, direction, distance, obstacleMask);
         }
         
         private void TryAction()

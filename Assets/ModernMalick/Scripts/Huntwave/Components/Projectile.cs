@@ -18,7 +18,7 @@ namespace ModernMalick.Huntwave.Components
         
         private Vector3 _startPosition;
         private bool _hasImpacted;
-
+        
         private void OnEnable()
         {
             _hasImpacted = false;

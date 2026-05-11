@@ -3,15 +3,14 @@ using UnityEngine;
 
 namespace ModernMalick.Huntwave.Enemy.Actions
 {
-    [RequireComponent(typeof(Enemy))]
-    public class EnemyMelee : AEnemyAction
+    public class EnemyMelee : EnemyAction
     {
         [SerializeField] private int damage;
 
-        protected override void ExecuteAction()
+        protected override void OnActionPerformed()
         {
+            if (enemy.IsDead || !enemy.IsTargetVisible()) return;
             Health.TryModifyHealth(enemy.Target.gameObject, -damage);
-            enemy.EndAction();
         }
     }
 }

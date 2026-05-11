@@ -12,8 +12,6 @@ GameObject:
   - component: {fileID: 5497866545924712037}
   - component: {fileID: 2100452874078571283}
   - component: {fileID: 920977986276367594}
-  - component: {fileID: 8793868471514491593}
-  - component: {fileID: 6706093648695493024}
   - component: {fileID: 763642914860880919}
   m_Layer: 7
   m_Name: Enemy
@@ -30,15 +28,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3773872871430761265}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0.75, z: 7.5}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2743827785832679020}
   - {fileID: 8560803851742913525}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!195 &5497866545924712037
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -58,7 +56,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 2
-  m_BaseOffset: 0.9
+  m_BaseOffset: 1
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!136 &2100452874078571283
@@ -96,10 +94,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b14141dbd6614619adeb2c1aede38464, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Enemy.Enemy
-  actionRange: 10
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 385
+  vision: {fileID: 3944930043152785137}
+  detectionRange: 50
+  chase: 1
+  minDistance: 5
+  actionDelay:
+    duration: 1
+    onStarted:
+      m_PersistentCalls:
+        m_Calls: []
+    onReady:
+      m_PersistentCalls:
+        m_Calls: []
+    onElapsedChanged:
+      m_PersistentCalls:
+        m_Calls: []
   actionCooldown:
     duration: 1
     onStarted:
@@ -111,37 +120,12 @@ MonoBehaviour:
     onElapsedChanged:
       m_PersistentCalls:
         m_Calls: []
-  onActionStarted:
+  onTargetDetected:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &8793868471514491593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3773872871430761265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3046db481434d89a56562f533eca65c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Core::ModernMalick.Core.Patterns.ObjectFactory
-  prefab: {fileID: 2135566276906796608, guid: cb300ef6ba0fbad4b99689167d106993, type: 3}
-  defaultCapacity: 10
-  maxSize: 50
---- !u!114 &6706093648695493024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3773872871430761265}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 94dc3ea210f84574a9189b163db8cb37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Enemy.Actions.EnemyProjectile
-  projectileOrigin: {fileID: 356726393937854594}
+  onActionPerformed:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &763642914860880919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -154,8 +138,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34fa7f6ea49946ebba6e94a7c06d2b8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Components.Health.Health
-  currentHealth: 100
-  maxHealth: 100
+  currentHealth: 15
+  maxHealth: 15
   onHealthChanged:
     m_PersistentCalls:
       m_Calls: []
@@ -201,7 +185,7 @@ MonoBehaviour:
   onHealthDepleted:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 8258098918607585680}
+      - m_Target: {fileID: 3773872871430761265}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -280,7 +264,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6af20d21fdb3e9846be9fcc5368045e6, type: 2}
+  - {fileID: 2100000, guid: 81caf0b4f4d2ac74e847cad8de1aa792, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -304,37 +288,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!1 &5250907557958544254
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 356726393937854594}
-  m_Layer: 7
-  m_Name: Projectile Origin
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &356726393937854594
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5250907557958544254}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 2}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 8039862801837965397}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5668292665206813845
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,6 +301,7 @@ GameObject:
   - component: {fileID: 203987813444592306}
   - component: {fileID: 4915202447366344855}
   - component: {fileID: 2682921706278505268}
+  - component: {fileID: 3944930043152785137}
   m_Layer: 7
   m_Name: Visor
   m_TagString: Untagged
@@ -367,8 +321,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.5, z: 0.5}
   m_LocalScale: {x: 0.5, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 356726393937854594}
+  m_Children: []
   m_Father: {fileID: 2743827785832679020}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &780534267805839380
@@ -404,7 +357,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 81caf0b4f4d2ac74e847cad8de1aa792, type: 2}
+  - {fileID: 2100000, guid: 6af20d21fdb3e9846be9fcc5368045e6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -486,6 +439,26 @@ MonoBehaviour:
       m_Calls: []
   targetHealth: {fileID: 763642914860880919}
   multiplier: 2
+--- !u!114 &3944930043152785137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5668292665206813845}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b25f511974474d8ab9ac011030a08b14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Components.VisionCone
+  rayCount: 1
+  rayColor: {r: 1, g: 0, b: 0, a: 1}
+  distance: 10
+  angle: 60
+  hitMask:
+    serializedVersion: 2
+    m_Bits: 393
+  ignoreOwnHierarchy: 1
 --- !u!1 &6307624592968351025
 GameObject:
   m_ObjectHideFlags: 0

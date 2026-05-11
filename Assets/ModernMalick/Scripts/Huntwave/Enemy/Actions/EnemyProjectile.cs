@@ -1,42 +1,19 @@
-using ModernMalick.Core.Patterns;
 using ModernMalick.Huntwave.Components;
 using UnityEngine;
-using UnityEngine.Events;
 
 namespace ModernMalick.Huntwave.Enemy.Actions
 {
-    [RequireComponent(typeof(ObjectFactory))]
-    public class EnemyProjectile : AEnemyAction
+    public class EnemyProjectile : EnemyAction
     {
         [SerializeField] private Transform projectileOrigin;
+        [SerializeField] private Projectile projectilePrefab;
         
-        [Component] private ObjectFactory _projectileFactory;
-        
-        protected override void ExecuteAction()
+        protected override void OnActionPerformed()
         {
-            var projectileObject = _projectileFactory.Get();
-            
-            var projectile = projectileObject.GetComponent<Projectile>();
-            
-            if (projectile != null)
-            {
-                projectile.transform.position = projectileOrigin.position;
-                projectile.transform.LookAt(enemy.Target);
-
-                UnityAction<Collider> onImpact = null;
-
-                onImpact = _ =>
-                {
-                    projectile.onImpact.RemoveListener(onImpact);
-                    _projectileFactory.Release(projectileObject);
-                };
-                
-                projectile.onImpact.AddListener(onImpact);
-                
-                projectile.Fire();
-            }
-            
-            enemy.EndAction();
+            if (enemy.IsDead) return;
+            var projectile = Instantiate(projectilePrefab, projectileOrigin.position, transform.rotation);
+            projectile.transform.LookAt(enemy.Target);
+            projectile.Fire();
         }
     }
 }

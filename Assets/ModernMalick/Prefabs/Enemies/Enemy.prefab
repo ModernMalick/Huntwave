@@ -95,9 +95,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Enemy.Enemy
   vision: {fileID: 3944930043152785137}
-  detectionRange: 50
   chase: 1
   minDistance: 5
+  actionRange: 10
   actionDelay:
     duration: 1
     onStarted:
@@ -453,7 +453,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Components.VisionCone
   rayCount: 1
   rayColor: {r: 1, g: 0, b: 0, a: 1}
-  distance: 10
+  distance: 50
   angle: 60
   hitMask:
     serializedVersion: 2

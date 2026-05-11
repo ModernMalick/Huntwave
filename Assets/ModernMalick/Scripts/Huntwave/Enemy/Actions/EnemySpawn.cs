@@ -1,7 +1,6 @@
-using ModernMalick.Huntwave.Enemy.Actions;
 using UnityEngine;
 
-namespace ModernMalick.Common.Enemies.Actions
+namespace ModernMalick.Huntwave.Enemy.Actions
 {
     public class EnemySpawn : EnemyAction
     {

@@ -8,14 +8,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7124549652007841126, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
-      propertyPath: distance
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7124549652007841126, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
-      propertyPath: rayCount
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1895791098723714637, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
       propertyPath: maxHealth
       value: 25
@@ -28,13 +20,21 @@ PrefabInstance:
       propertyPath: chase
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2022620099088060080, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
+      propertyPath: actionRange
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022620099088060080, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
+      propertyPath: actionDelay.duration
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2022620099088060080, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
+      propertyPath: actionCooldown.duration
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 2632723123452885355, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
       propertyPath: m_Name
-      value: Enemy - Rook Variant
-      objectReference: {fileID: 0}
-    - target: {fileID: 2767750196638239915, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
-      propertyPath: distance
-      value: 30
+      value: Enemy - Rook
       objectReference: {fileID: 0}
     - target: {fileID: 5155766644529109830, guid: 97de03353fd10e9468288db473c2ccc8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -80,6 +80,14 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7ec4e7373ac023f42bc829945cdcdf38, type: 2}
+    - target: {fileID: 7124549652007841126, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: distance
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7124549652007841126, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: rayCount
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

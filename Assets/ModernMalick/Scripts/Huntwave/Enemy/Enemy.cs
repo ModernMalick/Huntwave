@@ -14,13 +14,13 @@ namespace ModernMalick.Huntwave.Enemy
     public class Enemy : MonoBehaviourExtended
     {
         [SerializeField] private VisionCone vision;
-        [SerializeField] private float detectionRange;
         
         [Header("Movement")]
         [SerializeField] private bool chase;
         [SerializeField] private float minDistance = 2f;
         
         [Header("Action")]
+        [SerializeField] private float actionRange = 2f;
         [SerializeField] private Cooldown actionDelay;
         [SerializeField] private Cooldown actionCooldown;
 
@@ -81,13 +81,13 @@ namespace ModernMalick.Huntwave.Enemy
                 onTargetDetected.Invoke();
             }
             
-            if (!IsTargetInDetectionRange() || _isPerformingAction)
+            if (!IsTargetVisible() || _isPerformingAction)
             {
                 _agent.isStopped = true;
                 return;
             }
-            
-            if (IsTargetVisible() && actionCooldown.IsReady)
+
+            if (IsInActionRange() && IsTargetVisible() && actionCooldown.IsReady)
             {
                 StartAction();
             }
@@ -104,21 +104,16 @@ namespace ModernMalick.Huntwave.Enemy
             transform.LookAt(targetPosition);
         }
 
-        private bool IsTargetInDetectionRange()
-        {
-            return Vector3.Distance(transform.position, Target.position) <= detectionRange;
-        }
-
         public bool IsTargetVisible()
         {
-            foreach (var visionCurrentHit in vision.currentHits)
-            {
-                Debug.Log(visionCurrentHit.transform.name);
-            }
-
             return vision.currentHits.Any(hit => hit.collider != null && hit.collider.CompareTag("Player"));
         }
 
+        public bool IsInActionRange()
+        {
+            return Vector3.Distance(transform.position, Target.position) <= actionRange;
+        }
+        
         private bool IsOverMinDistance()
         {
             return Vector3.Distance(transform.position, Target.position) > minDistance;

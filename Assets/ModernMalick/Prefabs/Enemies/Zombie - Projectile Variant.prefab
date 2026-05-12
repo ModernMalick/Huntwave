@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &2253881059937358767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3773872871430761265, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_Name
+      value: Zombie - Projectile Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572427311273949687, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4572592100347524315, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5063625295290926120, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 22100000, guid: 5c63e508d3e1b014ab924658feda6452, type: 2}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 6294559657247082780, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7574890529249875597, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      propertyPath: actionRange
+      value: 30
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3773872871430761265, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4999615238297948498}
+  m_SourcePrefab: {fileID: 100100000, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+--- !u!4 &2321705338434651698 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4575444284262225309, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+  m_PrefabInstance: {fileID: 2253881059937358767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3105259982205040798 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3773872871430761265, guid: 188c95e2f0cf6c84fad8948371eba7d4, type: 3}
+  m_PrefabInstance: {fileID: 2253881059937358767}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4999615238297948498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3105259982205040798}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57cfe1d652b4f56aaa8299a312f620d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Zombie.Actions.EnemyProjectile
+  projectileOrigin: {fileID: 2321705338434651698}
+  projectilePrefab: {fileID: 9210053818450832341, guid: cb300ef6ba0fbad4b99689167d106993, type: 3}

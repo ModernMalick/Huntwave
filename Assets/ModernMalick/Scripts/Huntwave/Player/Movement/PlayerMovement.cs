@@ -73,12 +73,7 @@ namespace ModernMalick.Huntwave.Player.Movement
         
         private void FixedUpdate()
         {
-            var input = new Vector3(MoveInput.x, 0f, MoveInput.y);
-            
-            if (input.sqrMagnitude > 1f)
-            {
-                input.Normalize();
-            }
+            var input = new Vector3(MoveInput.x, 0f, MoveInput.y).normalized;
 
             var worldInput = _camera.transform.TransformDirection(input);
 

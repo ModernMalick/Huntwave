@@ -4998,6 +4998,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 598059413250706127, guid: 14c2043f70fad33459f6bbab2bef8720, type: 3}
   m_PrefabInstance: {fileID: 227939457}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &228469655 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4671558590760318418, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 037c42e843bf4908b672baa084cc5df7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerGround
 --- !u!1001 &229670090
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24611,7 +24622,7 @@ MonoBehaviour:
   m_Center: {x: 0, y: 2, z: 0}
   m_LayerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 257
   m_UseGeometry: 0
   m_DefaultArea: 0
   m_GenerateLinks: 0
@@ -26888,6 +26899,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 598059413250706127, guid: 14c2043f70fad33459f6bbab2bef8720, type: 3}
   m_PrefabInstance: {fileID: 1090599912}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1091690722 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2543346884073393752, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1102942243
 PrefabInstance:
@@ -43403,6 +43419,44 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 598059413250706127, guid: 14c2043f70fad33459f6bbab2bef8720, type: 3}
   m_PrefabInstance: {fileID: 1683567603}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1683678350 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7237897474455860183, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1683678353
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1683678350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e950860601f940bdbfd95d315848740a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Player.PlayerAnimation
+  target: {fileID: 1091690722}
+  rb: {fileID: 2127800270}
+  playerGround: {fileID: 228469655}
+  playerMovement: {fileID: 2127800269}
+  bobProfile:
+    verticalIntensity: 0.01
+    verticalSpeed: 1
+    horizontalIntensity: 0.005
+    horizontalSpeed: 0.5
+    rollIntensity: 1
+    lagIntensity: 0.02
+    lagMax: 0.1
+    dipIntensity: 0.1
+    dipSpeed: 5
+    lerpSpeed: 10
+    pitchOffsetIntensity: 0.05
+    pitchOffsetVerticalLimit: 90
+    swayIntensity: 1.5
+    swayMax: 5
+    swaySmoothing: 10
+    swayPositionIntensity: 0.0025
 --- !u!1001 &1687066113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52307,6 +52361,22 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
   m_PrefabInstance: {fileID: 2127432165}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2127800269 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3110406258598836465, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7725454473fd5548b8a8535979fa213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Shooter::ModernMalick.Shooter.Player.Movement.PlayerMovement
+--- !u!54 &2127800270 stripped
+Rigidbody:
+  m_CorrespondingSourceObject: {fileID: 2929373698984152505, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2128487745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53326,7 +53396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3110406258598836465, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       propertyPath: walkSpeed
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3110406258598836465, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       propertyPath: dashDuration
@@ -53506,7 +53576,10 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1957480447890763856, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1243048873}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7237897474455860183, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1683678353}
   m_SourcePrefab: {fileID: 100100000, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
 --- !u!114 &2459834846120522169 stripped
 MonoBehaviour:

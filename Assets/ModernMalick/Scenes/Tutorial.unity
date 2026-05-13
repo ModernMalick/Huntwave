@@ -26900,11 +26900,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 598059413250706127, guid: 14c2043f70fad33459f6bbab2bef8720, type: 3}
   m_PrefabInstance: {fileID: 1090599912}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1091690722 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2543346884073393752, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
-  m_PrefabInstance: {fileID: 2459834846120522168}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1102942243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -35464,6 +35459,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
   m_PrefabInstance: {fileID: 1389502079}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1389909864 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2882330324136285410, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1390390944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39201,6 +39201,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
   m_PrefabInstance: {fileID: 1495577054}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1502106174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1594844134882258787, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1502218416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41899,6 +41904,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 598059413250706127, guid: 14c2043f70fad33459f6bbab2bef8720, type: 3}
   m_PrefabInstance: {fileID: 1555659653}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1621418472 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2450004939613653694, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+  m_PrefabInstance: {fileID: 2459834846120522168}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1622163972
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43436,7 +43446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e950860601f940bdbfd95d315848740a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Player.PlayerAnimation
-  target: {fileID: 1091690722}
+  target: {fileID: 1502106174}
   rb: {fileID: 2127800270}
   playerGround: {fileID: 228469655}
   playerMovement: {fileID: 2127800269}
@@ -51725,6 +51735,66 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8793415467802821216, guid: e546bd7510885e24da62cf0ca6b03bbe, type: 3}
   m_PrefabInstance: {fileID: 2078147271}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &2078637742
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2078637743}
+  - component: {fileID: 2078637744}
+  m_Layer: 6
+  m_Name: Decal Projector
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2078637743
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078637742}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.025, y: 0, z: 0.04}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1621418472}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &2078637744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2078637742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0777d029ed3dffa4692f417d4aba19ca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.DecalProjector
+  m_Material: {fileID: 2100000, guid: 4705efb5d8dd21140888a7271fca293c, type: 2}
+  m_DrawDistance: 1000
+  m_FadeScale: 0.9
+  m_StartAngleFade: 180
+  m_EndAngleFade: 180
+  m_UVScale: {x: 1, y: 1}
+  m_UVBias: {x: 0, y: 0}
+  m_RenderingLayerMask:
+    serializedVersion: 0
+    m_Bits: 1
+  m_ScaleMode: 0
+  m_Offset: {x: 0, y: 0, z: 0.01}
+  m_Size: {x: 0.1, y: 0.025, z: 0.02}
+  m_FadeFactor: 1
+  version: 1
+  m_DecalLayerMask: 1
 --- !u!4 &2079618336 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1835001211714528853, guid: d6b56504304c325419b598fe3ddb95ed, type: 3}
@@ -53475,6 +53545,10 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8619406755609964542, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+      propertyPath: infiniteMagazine
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8619406755609964542, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       propertyPath: pelletsMaxSpreadAngle
       value: 0.5
       objectReference: {fileID: 0}
@@ -53573,6 +53647,9 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 2450004939613653694, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2078637743}
     - targetCorrespondingSourceObject: {fileID: 1957480447890763856, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1243048873}
@@ -53580,6 +53657,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7237897474455860183, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1683678353}
+    - targetCorrespondingSourceObject: {fileID: 2882330324136285410, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2459834846120522177}
+    - targetCorrespondingSourceObject: {fileID: 2882330324136285410, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2459834846120522176}
   m_SourcePrefab: {fileID: 100100000, guid: fe34516ec252231409e93c6edbe2289a, type: 3}
 --- !u!114 &2459834846120522169 stripped
 MonoBehaviour:
@@ -53592,6 +53675,41 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f130a9799e2245ed9cbfb9d5e6750472, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UI::ModernMalick.UI.DynamicText
+--- !u!114 &2459834846120522176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389909864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164555ffd08d4bb49e0410d106831213, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: ModernMalick.Huntwave::ModernMalick.Huntwave.Player.Weapons.Guns.GunAnimator
+  referenceClipLength: 1
+--- !u!95 &2459834846120522177
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1389909864}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 5ef70d231bedbd84fa227bb2652ef9f3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &2801591703711276667
 PrefabInstance:
   m_ObjectHideFlags: 0

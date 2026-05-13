@@ -30,7 +30,8 @@ namespace ModernMalick.Huntwave.Player.Weapons
         public UnityEvent<bool> onChargeChanged;
         public UnityEvent<float> onChargeUpdated;
         public UnityEvent onChargeCompleted;
-        
+
+        public float AttackRate => attackRate;
         public bool IsCharged { get; private set; }
         public bool CanCharge => canCharge;
         public Transform LeftGrip => leftGrip;

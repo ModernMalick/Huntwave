@@ -31,6 +31,7 @@ namespace ModernMalick.Huntwave.Player.Weapons.Guns
         public UnityEvent<int> onMagazineAmmoChanged;
         
         public bool IsAutomatic => isAutomatic;
+        public Cooldown ReloadCooldown => reloadCooldown;
         
         private int _currentMagazine;
         public int CurrentMagazine

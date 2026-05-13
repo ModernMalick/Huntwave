@@ -15,6 +15,7 @@ namespace ModernMalick.Huntwave.Components.Timing
         public UnityEvent onReady;
         public UnityEvent<float> onElapsedChanged;
 
+        public float Duration => duration;
         private float _elapsed;
 
         public float Elapsed

@@ -1,0 +1,145 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8336298298719470416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 664bbe8f21e78f9448b079eff6f4744e, type: 3}
+  m_Name: PluginObjectLayerDbUI_LayerViewState
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.ListViewState
+  selectedItems:
+    _serializedList: []
+  selectRangeBeginId:
+    _guidString: 00000000-0000-0000-0000-000000000000
+  selectRangeEndId:
+    _guidString: 00000000-0000-0000-0000-000000000000
+  hasSelectRange: 0
+  scrollOffset: {x: 0, y: 0}
+  vertScrollHighValue: 0
+  vertScrollLowValue: 0
+--- !u!114 &-7973992577516444405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79425504febc2843801a7aa28fd9495, type: 3}
+  m_Name: Layer_0
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.PluginObjectLayer
+  _guid:
+    _guidString: c2051885-5227-44c9-b2dc-c64d2dc448c5
+  _layer: 0
+  _isErasable: 1
+  _isTerrainMesh: 0
+  _isSphericalMesh: 0
+  _uiSelected: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ef8253b91aa5344e823f5d661d2ab1f, type: 3}
+  m_Name: PluginObjectLayerDb
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.PluginObjectLayerDb
+  _layers:
+  - {fileID: -7973992577516444405}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 3688600661729393161}
+  - {fileID: 9186820006196940110}
+  - {fileID: 5346829369518487484}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+--- !u!114 &3688600661729393161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79425504febc2843801a7aa28fd9495, type: 3}
+  m_Name: Layer_6
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.PluginObjectLayer
+  _guid:
+    _guidString: c407908b-f635-46a2-a20d-8b9e7a13d1c6
+  _layer: 6
+  _isErasable: 1
+  _isTerrainMesh: 0
+  _isSphericalMesh: 0
+  _uiSelected: 0
+--- !u!114 &5346829369518487484
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79425504febc2843801a7aa28fd9495, type: 3}
+  m_Name: Layer_8
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.PluginObjectLayer
+  _guid:
+    _guidString: 32eb788f-71c6-4c84-a7bf-f96d739a557a
+  _layer: 8
+  _isErasable: 1
+  _isTerrainMesh: 0
+  _isSphericalMesh: 0
+  _uiSelected: 0
+--- !u!114 &9186820006196940110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f79425504febc2843801a7aa28fd9495, type: 3}
+  m_Name: Layer_7
+  m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.PluginObjectLayer
+  _guid:
+    _guidString: bb5cabd6-ff5d-43b7-ab7d-e9ec75527e9f
+  _layer: 7
+  _isErasable: 1
+  _isTerrainMesh: 0
+  _isSphericalMesh: 0
+  _uiSelected: 0

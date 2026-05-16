@@ -56,12 +56,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.GridViewState
   selectedItems:
     _serializedList:
-    - _guidString: 8568db9f-02be-4ef5-a2f2-4bf22e11a648
+    - _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
   selectRangeBeginId:
-    _guidString: 8568db9f-02be-4ef5-a2f2-4bf22e11a648
+    _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
   selectRangeEndId:
-    _guidString: 8568db9f-02be-4ef5-a2f2-4bf22e11a648
+    _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
   hasSelectRange: 1
-  scrollOffset: {x: 0, y: 324}
-  vertScrollHighValue: 2814.4
+  scrollOffset: {x: 0, y: 486}
+  vertScrollHighValue: 687.19995
   vertScrollLowValue: 0

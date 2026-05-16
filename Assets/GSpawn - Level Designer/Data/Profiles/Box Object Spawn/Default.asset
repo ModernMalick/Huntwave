@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.BoxObjectSpawnSettingsProfile
   _profileName: Default
   _cellMode: 1
-  _useSceneGridCellSize: 1
-  _gridCellSize: {x: 1, y: 1, z: 1}
+  _useSceneGridCellSize: 0
+  _gridCellSize: {x: 2.5, y: 1, z: 2.5}
   _cornerMode: 0
   _cornerGapSize: 1
   _objectSkipChance: 0

@@ -30,15 +30,15 @@ MonoBehaviour:
   m_Name: PrefabLibProfileDbUI_LibViewState
   m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.TreeViewState
   selectedItems:
-    _serializedList:
-    - _guidString: e66e4fdc-e956-43af-b471-cec184722083
-  collapsedItems:
     _serializedList: []
+  collapsedItems:
+    _serializedList:
+    - _guidString: eb167c56-ca64-4f4b-bcbb-b83b0deb2c45
   selectRangeBeginId:
-    _guidString: e66e4fdc-e956-43af-b471-cec184722083
+    _guidString: eb167c56-ca64-4f4b-bcbb-b83b0deb2c45
   selectRangeEndId:
-    _guidString: e66e4fdc-e956-43af-b471-cec184722083
-  hasSelectRange: 1
+    _guidString: eb167c56-ca64-4f4b-bcbb-b83b0deb2c45
+  hasSelectRange: 0
   scrollOffset: {x: 0, y: 0}
   vertScrollHighValue: 0
   vertScrollLowValue: 0
@@ -55,13 +55,12 @@ MonoBehaviour:
   m_Name: PluginPrefabManagerUI_PrefabViewState
   m_EditorClassIdentifier: Assembly-CSharp::GSPAWN.GridViewState
   selectedItems:
-    _serializedList:
-    - _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
+    _serializedList: []
   selectRangeBeginId:
     _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
   selectRangeEndId:
     _guidString: b78c6141-42b7-4a1b-846d-561c9ce40b4b
-  hasSelectRange: 1
-  scrollOffset: {x: 0, y: 486}
-  vertScrollHighValue: 687.19995
+  hasSelectRange: 0
+  scrollOffset: {x: 0, y: 0}
+  vertScrollHighValue: 0
   vertScrollLowValue: 0
